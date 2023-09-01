@@ -7,11 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Entities\Categorias\**" />
+    <EmbeddedResource Remove="Entities\Categorias\**" />
+    <None Remove="Entities\Categorias\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\..\BuildingBlocks\NarniaSystem.ProjetoFila.Core\NarniaSystem.ProjetoFila.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\Categorias\" />
     <Folder Include="Entities\Senhas\" />
   </ItemGroup>
 
