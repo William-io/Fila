@@ -13,8 +13,9 @@ namespace NarniaSystem.ProjetoFila.Core.Data.Abstractions
 {
     public abstract class Repository<TEntity> where TEntity : Entity, IAggregateRoot
     {
-        protected CustomContext Context { get; set; }
         public IUnitOfWork UnitOfWork => Context;
+
+        protected CustomContext Context { get; set; }
 
         public Repository(CustomContext context) =>
             Context = context;
@@ -39,13 +40,15 @@ namespace NarniaSystem.ProjetoFila.Core.Data.Abstractions
 
         public Task<TEntity?> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
         {
-            return Context.Set<TEntity>().FirstOrDefaultAsync(predicate);
+            return Context.Set<TEntity>()
+                .FirstOrDefaultAsync(predicate);
         }
 
         public Repository<TEntity> Include(params string[] includes)
         {
             foreach (var include in includes)
-                Context.Set<TEntity>().Include(include);
+                Context.Set<TEntity>()
+                    .Include(include);
 
             return this;
         }

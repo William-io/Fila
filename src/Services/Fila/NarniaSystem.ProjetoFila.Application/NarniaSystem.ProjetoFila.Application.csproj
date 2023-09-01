@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\NarniaSystem.ProjetoFila.Core\NarniaSystem.ProjetoFila.Core.csproj" />
+    <ProjectReference Include="..\NarniaSystem.ProjetoFila.Fila.Domain\NarniaSystem.ProjetoFila.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\" />
+  </ItemGroup>
+
 </Project>
