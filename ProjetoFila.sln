@@ -9,13 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{79
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{7FE547FB-9863-4D0C-BA76-A0B577E6E5BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NarniaSystem.ProjetoFila.Core", "src\BuildingBlocks\NarniaSystem.ProjetoFila.Core\NarniaSystem.ProjetoFila.Core.csproj", "{D34FFE9B-6914-459A-9063-2A92FDF012EA}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fila", "Fila", "{AA824B33-A9E7-43FE-AEAA-15065FBE4F1D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NarniaSystem.ProjetoFila.Domain", "src\Services\Fila\NarniaSystem.ProjetoFila.Fila.Domain\NarniaSystem.ProjetoFila.Domain.csproj", "{F6CEDD66-BC40-49B5-A0B7-8BD625304454}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NarniaSystem.ProjetoFila.Infrastructure", "src\Services\Fila\NarniaSystem.ProjetoFila.Infrastructure\NarniaSystem.ProjetoFila.Infrastructure.csproj", "{DCB5C197-7F06-443E-9FBC-86C0A7CE7BC2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NarniaSystem.ProjetoFila.Application", "src\Services\Fila\NarniaSystem.ProjetoFila.Application\NarniaSystem.ProjetoFila.Application.csproj", "{A7CBBF36-4BDD-49FB-8DEB-735A592ACE1B}"
 EndProject
@@ -26,7 +22,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarniaSystem.ProjetoFila.Infrastructure.Ioc", "src\Services\Fila\NarniaSystem.ProjetoFila.Infrastructure.Ioc\NarniaSystem.ProjetoFila.Infrastructure.Ioc.csproj", "{8B611A1F-760D-4088-A1DD-01B82A14A6E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NarniaSystem.ProjetoFila.Infrastructure.Ioc", "src\Services\Fila\NarniaSystem.ProjetoFila.Infrastructure.Ioc\NarniaSystem.ProjetoFila.Infrastructure.Ioc.csproj", "{8B611A1F-760D-4088-A1DD-01B82A14A6E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarniaSystem.ProjetoFila.Core", "src\BuildingBlocks\NarniaSystem.ProjetoFila.Core\NarniaSystem.ProjetoFila.Core.csproj", "{CFD9C035-3B61-47BF-8813-A16D671360E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarniaSystem.ProjetoFila.Infrastructure", "src\Services\Fila\NarniaSystem.ProjetoFila.Infrastructure\NarniaSystem.ProjetoFila.Infrastructure.csproj", "{965E7C5E-05E9-406C-85D2-127AA7399CFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,18 +34,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D34FFE9B-6914-459A-9063-2A92FDF012EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D34FFE9B-6914-459A-9063-2A92FDF012EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D34FFE9B-6914-459A-9063-2A92FDF012EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D34FFE9B-6914-459A-9063-2A92FDF012EA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F6CEDD66-BC40-49B5-A0B7-8BD625304454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F6CEDD66-BC40-49B5-A0B7-8BD625304454}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6CEDD66-BC40-49B5-A0B7-8BD625304454}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6CEDD66-BC40-49B5-A0B7-8BD625304454}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DCB5C197-7F06-443E-9FBC-86C0A7CE7BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DCB5C197-7F06-443E-9FBC-86C0A7CE7BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DCB5C197-7F06-443E-9FBC-86C0A7CE7BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DCB5C197-7F06-443E-9FBC-86C0A7CE7BC2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A7CBBF36-4BDD-49FB-8DEB-735A592ACE1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A7CBBF36-4BDD-49FB-8DEB-735A592ACE1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7CBBF36-4BDD-49FB-8DEB-735A592ACE1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,18 +50,26 @@ Global
 		{8B611A1F-760D-4088-A1DD-01B82A14A6E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B611A1F-760D-4088-A1DD-01B82A14A6E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B611A1F-760D-4088-A1DD-01B82A14A6E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFD9C035-3B61-47BF-8813-A16D671360E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFD9C035-3B61-47BF-8813-A16D671360E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFD9C035-3B61-47BF-8813-A16D671360E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFD9C035-3B61-47BF-8813-A16D671360E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965E7C5E-05E9-406C-85D2-127AA7399CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965E7C5E-05E9-406C-85D2-127AA7399CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965E7C5E-05E9-406C-85D2-127AA7399CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965E7C5E-05E9-406C-85D2-127AA7399CFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D34FFE9B-6914-459A-9063-2A92FDF012EA} = {FE73E36A-D999-4854-9F49-87D628C56E8B}
 		{AA824B33-A9E7-43FE-AEAA-15065FBE4F1D} = {791C3B13-A081-4A75-A57D-7FB038BB532E}
 		{F6CEDD66-BC40-49B5-A0B7-8BD625304454} = {AA824B33-A9E7-43FE-AEAA-15065FBE4F1D}
-		{DCB5C197-7F06-443E-9FBC-86C0A7CE7BC2} = {AA824B33-A9E7-43FE-AEAA-15065FBE4F1D}
 		{A7CBBF36-4BDD-49FB-8DEB-735A592ACE1B} = {AA824B33-A9E7-43FE-AEAA-15065FBE4F1D}
 		{119AF60C-09F8-4E7B-8DE1-AEBFC3A7358B} = {AA824B33-A9E7-43FE-AEAA-15065FBE4F1D}
 		{8B611A1F-760D-4088-A1DD-01B82A14A6E6} = {AA824B33-A9E7-43FE-AEAA-15065FBE4F1D}
+		{CFD9C035-3B61-47BF-8813-A16D671360E3} = {FE73E36A-D999-4854-9F49-87D628C56E8B}
+		{965E7C5E-05E9-406C-85D2-127AA7399CFF} = {AA824B33-A9E7-43FE-AEAA-15065FBE4F1D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD9A2DA9-CFD7-4B1F-9679-C3F3F1C657D2}

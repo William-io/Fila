@@ -9,11 +9,11 @@ namespace NarniaSystem.ProjetoFila.Infrastructure.Ioc
     {
         public static IServiceCollection AddConfigDatabase(this IServiceCollection services, IConfiguration configuration)
         {
-            var connectionString = configuration.GetConnectionString("ConnectionMysql");
+            var connectionString = configuration.GetConnectionString("WioHealthcareConnection");
 
             services.AddDbContext<FilaDbContext>(options =>
             {
-                options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+                options.UseSqlServer(configuration.GetConnectionString("WioHealthcareConnection"));
             });
 
 

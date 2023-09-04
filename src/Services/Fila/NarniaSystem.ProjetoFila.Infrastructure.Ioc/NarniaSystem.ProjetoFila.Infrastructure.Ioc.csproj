@@ -7,13 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+	  <Using Include="Microsoft.EntityFrameworkCore" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NarniaSystem.ProjetoFila.Application\NarniaSystem.ProjetoFila.Application.csproj" />
-    <ProjectReference Include="..\NarniaSystem.ProjetoFila.Fila.Domain\NarniaSystem.ProjetoFila.Domain.csproj" />
     <ProjectReference Include="..\NarniaSystem.ProjetoFila.Infrastructure\NarniaSystem.ProjetoFila.Infrastructure.csproj" />
   </ItemGroup>
 

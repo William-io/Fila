@@ -1,10 +1,7 @@
 ﻿using FluentValidation.Results;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using ValidationResult = FluentValidation.Results.ValidationResult;
 
 namespace NarniaSystem.ProjetoFila.Core.CQRS.Abstractions.Commands
 {

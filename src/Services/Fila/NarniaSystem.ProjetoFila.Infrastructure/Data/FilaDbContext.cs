@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using NarniaSystem.ProjetoFila.Core.Data.Interfaces;
 using NarniaSystem.ProjetoFila.Core.Domain.Abstractions;
+using NarniaSystem.ProjetoFila.Domain.Entities.Senhas;
 using System.Reflection.Emit;
 
 namespace NarniaSystem.ProjetoFila.Infrastructure.Data
@@ -10,12 +11,13 @@ namespace NarniaSystem.ProjetoFila.Infrastructure.Data
     {
         public FilaDbContext(DbContextOptions<FilaDbContext> options) : base(options){}
 
+        public DbSet<Senha> Senhas { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             ConfigDefalutValues(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(FilaDbContext).Assembly);
         }
-
 
         private void ConfigDefalutValues(ModelBuilder modelBuilder)
         {

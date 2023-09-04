@@ -3,13 +3,10 @@ using NarniaSystem.ProjetoFila.Infrastructure.Ioc;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddConfigDatabase(builder.Configuration);
 
 builder.Services.AddControllers();
 
-var services = builder.Services;
-var configuration = builder.Configuration;
-
-services.AddConfigDatabase(configuration);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
