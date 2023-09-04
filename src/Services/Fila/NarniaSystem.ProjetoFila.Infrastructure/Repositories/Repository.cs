@@ -2,34 +2,30 @@
 using NarniaSystem.ProjetoFila.Core.Data.Interfaces;
 using NarniaSystem.ProjetoFila.Core.Domain.Abstractions;
 using NarniaSystem.ProjetoFila.Core.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using NarniaSystem.ProjetoFila.Infrastructure.Data;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace NarniaSystem.ProjetoFila.Core.Data.Abstractions
+namespace NarniaSystem.ProjetoFila.Infrastructure.Repositories
 {
     public abstract class Repository<TEntity> where TEntity : Entity, IAggregateRoot
     {
         public IUnitOfWork UnitOfWork => Context;
 
-        protected CustomContext Context { get; set; }
+        protected FilaDbContext Context { get; set; }
 
-        public Repository(CustomContext context) =>
+        public Repository(FilaDbContext context) =>
             Context = context;
 
         public Task<TEntity?> GetByIdAsync(Guid id)
         {
             return Context.Set<TEntity>()
-                .FirstOrDefaultAsync(entity => entity.Id == id);
+            .FirstOrDefaultAsync(entity => entity.Id == id);
         }
 
         public Task<List<TEntity>> GetAllAsync()
         {
             return Context.Set<TEntity>()
-                .ToListAsync();
+            .ToListAsync();
         }
 
         public Task<List<TEntity>> WhereAsync(Expression<Func<TEntity, bool>> predicate)
@@ -49,7 +45,6 @@ namespace NarniaSystem.ProjetoFila.Core.Data.Abstractions
             foreach (var include in includes)
                 Context.Set<TEntity>()
                     .Include(include);
-
             return this;
         }
 

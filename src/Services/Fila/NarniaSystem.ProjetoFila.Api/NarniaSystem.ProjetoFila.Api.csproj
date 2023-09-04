@@ -15,4 +15,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NarniaSystem.ProjetoFila.Infrastructure.Ioc\NarniaSystem.ProjetoFila.Infrastructure.Ioc.csproj" />
+  </ItemGroup>
+
 </Project>

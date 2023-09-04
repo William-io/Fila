@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NarniaSystem.ProjetoFila.Infrastructure.Ioc", "src\Services\Fila\NarniaSystem.ProjetoFila.Infrastructure.Ioc\NarniaSystem.ProjetoFila.Infrastructure.Ioc.csproj", "{8B611A1F-760D-4088-A1DD-01B82A14A6E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{119AF60C-09F8-4E7B-8DE1-AEBFC3A7358B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{119AF60C-09F8-4E7B-8DE1-AEBFC3A7358B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{119AF60C-09F8-4E7B-8DE1-AEBFC3A7358B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B611A1F-760D-4088-A1DD-01B82A14A6E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B611A1F-760D-4088-A1DD-01B82A14A6E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B611A1F-760D-4088-A1DD-01B82A14A6E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B611A1F-760D-4088-A1DD-01B82A14A6E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{DCB5C197-7F06-443E-9FBC-86C0A7CE7BC2} = {AA824B33-A9E7-43FE-AEAA-15065FBE4F1D}
 		{A7CBBF36-4BDD-49FB-8DEB-735A592ACE1B} = {AA824B33-A9E7-43FE-AEAA-15065FBE4F1D}
 		{119AF60C-09F8-4E7B-8DE1-AEBFC3A7358B} = {AA824B33-A9E7-43FE-AEAA-15065FBE4F1D}
+		{8B611A1F-760D-4088-A1DD-01B82A14A6E6} = {AA824B33-A9E7-43FE-AEAA-15065FBE4F1D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD9A2DA9-CFD7-4B1F-9679-C3F3F1C657D2}
